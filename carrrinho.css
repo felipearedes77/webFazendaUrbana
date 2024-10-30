@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f6f6f6;
+}
+body > header {
+  background: #111;
+  color: white;
+  font-size: 24px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+body > main {
+  background: #fff;
+  padding: 0 30px 30px;
+}
+body > main .page-title {
+  font-size: 35px;
+  padding: 50px 0;
+  text-align: center;
+}
+body > main .content {
+  display: flex;
+}
+body > main .content section {
+  flex: 1;
+}
+body > main .content aside {
+  min-width: 240px;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+}
+table thead tr {
+  border-bottom: 3px solid #eee;
+}
+table thead tr th {
+  text-align: left;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: #666;
+}
+table tbody tr {
+  border-bottom: 3px solid #eee;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table tbody tr td {
+  padding: 45px 0;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+}
+.product img {
+  border-radius: 6px;
+  max-width: 250px;
+  max-height: 250px;
+}
+.product .info {
+  margin-left: 20px;
+}
+.product .info .title {
+  font-size: 20px;
+}
+.product .info .descricao {
+  color: #666;
+}
+
+.qtd {
+  background: #eee;
+  display: inline-flex;
+  padding: 0px 0px;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 40px;
+}
+.qtd button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0 15px;
+  font-size: 20px;
+  height: 100%;
+}
+.qtd button:hover {
+  background: #ddd;
+}
+
+.remove {
+  background: #eee;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+aside {
+  margin-left: 30px;
+}
+aside .box {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background: #eee;
+}
+aside .box header {
+  padding: 15px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+aside .box .info {
+  padding: 20px;
+  font-size: 14px;
+}
+aside .box .info > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+aside .box .info button {
+  color: green;
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+aside .box footer {
+  padding: 15px 20px;
+  background: #ccc;
+  font-size: 18px;
+}
+aside > button {
+  color: white;
+  background: green;
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px solid;
+  font-size: 14px;
+}/*# sourceMappingURL=carrrinho.css.map */

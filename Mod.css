@@ -1,0 +1,138 @@
+@charset "UTF-08";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    border: 1px solid black;
+    height: 230px;
+    background-image: url(imagens_Pim/imagem\ de\ fundo.jpeg);
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+ header > h1 {
+    text-align: center;
+    color: #ffffffcb;
+    padding-top: 50px;
+    margin: auto;
+    width: 100vw;
+    font-size: 2.9em;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav{
+    height: 40px;
+    padding-bottom: 40px;
+}
+
+nav > ul{
+    padding-top: 10px;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+    display:flex ;
+   justify-content:space-evenly;
+  
+}
+
+ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    width: 108px;
+    height: 38px;
+    text-align: center;
+    margin: auto;
+    padding-top: 6px;
+    border-radius: 20%;
+}
+
+a{
+    width: 30px;
+    height: 30px;
+}
+
+ul:hover{
+   
+    box-shadow: 1px 1px 3px black
+}
+a:hover{
+    color:rgba(0, 128, 0, 0.616);
+}
+
+
+
+section{
+    margin: auto;
+    padding-top: 10px;
+    width: 90vw;
+    padding-bottom: 37px;
+}
+
+section > h2{
+    color: rgba(0, 128, 0, 0.692);
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 16px;
+    font-weight: bolder;
+    text-align: justify;
+    margin: auto;
+}
+
+section > p{
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    padding-right: 2px;
+    text-align: justify;
+}
+
+footer{
+    height: 320px;
+  }
+
+footer > h2{
+    color:  rgba(0, 128, 0, 0.781);
+    font-size: 1.8em;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-top: 20px ;
+}
+
+div#Conteiner1,div#Conteiner2 {
+   margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+
+.Contato {
+    width: 10px;
+    height: 10px;
+    margin-right: 70px;
+    margin-bottom: 50px;
+}
+
+.Escrita{
+    text-align: justify;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Escrita:hover{
+    color: #178000df;
+}

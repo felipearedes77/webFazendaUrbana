@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="carrrinho.css">
+    <script src="carrinho.js"></script>
+    <title>Carrinho de Compras</title>
+</head>
+<body>
+    <header>
+        <span>Carrinho de Compras</span>
+    </header>
+
+    <main>
+        <div class="page-title">Seu Carrinho</div>
+        <div class="content">
+            <section>
+                <table id="cartTable">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            <th>-</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartItems">
+                        
+                    </tbody>
+                </table>
+            </section>
+            <aside>
+                <div class="box">
+                    <header>Resumo da Compra</header>
+                    <div class="info">
+                        <div><span>Sub-Total</span><span id="subTotal">R$418</span></div>
+                        <div><span>Frete</span><span>free</span></div>
+                        <div><button>Adicionar Cupom de Desconto</button></div>
+                    </div>
+                    <footer>
+                        <span>Total</span>
+                        <span id="total">R$418</span>
+                    </footer>
+                </div>
+                <button>Finalizar Compra</button>
+            </aside>
+        </div>
+    </main>
+    
+</body>
+</html>
