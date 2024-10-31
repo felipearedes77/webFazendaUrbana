@@ -53,6 +53,33 @@ header h1 {
 #cart-button:hover {
     background-color: #666; 
 }
+nav {
+    margin-top: 0px; 
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0px 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-style:inherit;
+    margin: 30px;
+    display: flex;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; 
+}
 .card-container{
     display: flex;
     flex-wrap: wrap;
@@ -161,3 +188,4 @@ header h1 {
 }
 .view-more:hover {
     background-color: #FFC300; 
+}

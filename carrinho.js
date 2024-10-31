@@ -70,6 +70,7 @@ function removeFromCart(descricao) {
     renderCartProducts(); // Atualiza a lista após remoção
 }
 
+
 // Função para atualizar a quantidade de produtos no carrinho
 function updateQuantity(descricao, change) {
     const qtyElement = document.getElementById(`qty-${descricao}`);
@@ -89,12 +90,16 @@ function updateQuantity(descricao, change) {
     // Atualiza o produto no carrinho
     const product = carrinho.find(item => item.descricao === descricao);
     if (product) {
-        product.quantidade = quantidade; // Atualiza a quantidade
+        product.quantidade = quantidade; // Atualiza a quantidade no objeto
     }
+
+    // Salva a quantidade atualizada no localStorage
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
     // Atualiza o total
     updateTotal(); // Chama a função para atualizar o total
 }
+
 
 // Função para atualizar o total da compra
 function updateTotal() {
@@ -123,8 +128,16 @@ function removeFromCart(descricao) {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     renderCartProducts(); // Atualiza a lista após remoção
 }
-
-// Chamando a função para renderizar produtos do carrinho ao carregar a página
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Chamando a função para renderizar produtos do carrinho ao carregar a página
     renderCartProducts();
+    // Adiciona o evento de clique ao botão "Finalizar Compra"
+    const finalizarCompraBtn = document.getElementById("finalizarCompra");
+    if (finalizarCompraBtn) {
+        finalizarCompraBtn.addEventListener("click", function() {
+            window.location.href = 'pagamentos.html';
+        });
+    }
 });
+
+

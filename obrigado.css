@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    text-align: center; 
+}
+
+.ty {
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    font-size: 24px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9; 
+}
+
+button {
+    margin: 10px; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #007bff; 
+    color: white; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+}

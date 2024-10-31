@@ -66,6 +66,7 @@ function addToCart(produto) {
     console.log(`Produto ${produto.descricao} adicionado ao carrinho!`);
 }
 
+
 // Função para renderizar produtos na página
 function renderProducts(produtos) {
     const container = document.getElementById('product-cards'); // Acesse pelo ID correto
@@ -96,6 +97,11 @@ function renderProducts(produtos) {
         price.className = 'price';
         price.textContent = `R$ ${produto.preco.toFixed(2)}`;
 
+        // Novo elemento h2 para mostrar a quantidade de estoque
+        const stockQuantity = document.createElement('h2');
+        stockQuantity.className = 'stock';
+        stockQuantity.textContent = `Estoque: ${produto.qtd_estoque}`;
+
         const buyButton = document.createElement('a');
         buyButton.href = '#';
         buyButton.className = 'buy';
@@ -110,6 +116,7 @@ function renderProducts(produtos) {
         // Montando o card
         contentBx.appendChild(title);
         contentBx.appendChild(price);
+        contentBx.appendChild(stockQuantity); // Adiciona o novo h2 com a quantidade de estoque
         contentBx.appendChild(buyButton);
         card.appendChild(imgBx);
         card.appendChild(contentBx);
@@ -118,6 +125,7 @@ function renderProducts(produtos) {
         container.appendChild(card);
     });
 }
+
 
 
 // Chama updateCartCount() ao carregar a página

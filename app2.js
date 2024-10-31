@@ -1,9 +1,8 @@
 // Mapeamento de produtos para imagens 
 const productImages = {
-    "Alface": "https://png.pngtree.com/png-clipart/20201208/original/pngtree-green-lettuce-leaves-png-image_5514210.jpg",
-    "Batata": "https://static.vecteezy.com/system/resources/thumbnails/042/538/683/small/raw-potatoes-isolated-free-png.png",
-    "cenoura": "https://nicolaumax.com.br/wp-content/uploads/2024/06/cenoura.png",
-    
+    "Alface": "alface.png",
+    "Batata": "bhbatata.png",
+    "cenoura": "cenoura-alanna.png",
 };
 
 // Array para armazenar o carrinho de compras (pode ser migrado para localStorage para persistência)
@@ -95,6 +94,11 @@ function renderProducts(produtos) {
         price.className = 'price';
         price.textContent = `R$ ${produto.preco.toFixed(2)}`;
 
+    
+        const stockQuantity = document.createElement('h2');
+        stockQuantity.className = 'stock';
+        stockQuantity.textContent = `Estoque: ${produto.qtd_estoque}`;
+
         const buyButton = document.createElement('a');
         buyButton.href = '#';
         buyButton.className = 'buy';
@@ -109,6 +113,7 @@ function renderProducts(produtos) {
         // Montando o card
         contentBx.appendChild(title);
         contentBx.appendChild(price);
+        contentBx.appendChild(stockQuantity); // Adiciona o novo h2 com a quantidade de estoque
         contentBx.appendChild(buyButton);
         card.appendChild(imgBx);
         card.appendChild(contentBx);
@@ -117,6 +122,7 @@ function renderProducts(produtos) {
         container.appendChild(card);
     });
 }
+
 
 
 // Chama updateCartCount() ao carregar a página
