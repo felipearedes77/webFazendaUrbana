@@ -1,3 +1,4 @@
+/* login.css */
 * {
     margin: 0;
     padding: 0;
@@ -26,13 +27,13 @@ body {
     align-items: center;
 }
 
-.btncolor {
+.botoes {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-#btnSignin, #btnSignup {
+#btnEntrar, #btnCadastrar {
     padding: 10px 20px;
     border: none;
     background-color: #007bff;
@@ -43,31 +44,45 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#btnSignin.active, #btnSignup.active {
+#btnEntrar.ativo, #btnCadastrar.ativo {
     background-color: #0056b3;
 }
 
-#btnSignin:hover, #btnSignup:hover {
+#btnEntrar:hover, #btnCadastrar:hover {
     background-color: #0056b3;
 }
 
-.form {
+.formulario {
     display: none;
     width: 100%;
 }
 
-.form h2 {
+.formulario h2 {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.form label {
+#mensagem {
+    display: none;
+    font-size: 13px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+}
+
+#mensagemCadastro{
+    display: none;
+    font-size: 13px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+}
+
+.formulario label {
     margin-bottom: 5px;
     display: block;
     font-weight: bold;
 }
 
-.form input {
+.formulario input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -75,7 +90,7 @@ body {
     border-radius: 5px;
 }
 
-.submit-btn {
+.botao-submit {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -86,15 +101,15 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
+.botao-submit:hover {
     background-color: #0056b3;
 }
 
-.hidden {
+.oculto {
     display: none;
 }
 
-/* Show the form */
-.form.active {
+/* Exibe o formulário ativo */
+.formulario.ativo {
     display: block;
 }

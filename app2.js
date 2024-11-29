@@ -2,7 +2,8 @@
 const productImages = {
     "Alface": "alface.png",
     "Batata": "bhbatata.png",
-    "cenoura": "cenoura-alanna.png",
+    "Cenoura": "cenoura-alanna.png",
+    "Rucula":"rucula.png"
 };
 
 // Array para armazenar o carrinho de compras (pode ser migrado para localStorage para persistência)
@@ -11,11 +12,11 @@ let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 // Função para buscar produtos da API
 async function fetchProducts() {
     try {
-        const response = await fetch('http://192.168.1.111:1777/produtos');
+        const response = await fetch('http://localhost:1777/produtos');
         const produtos = await response.json();
         console.log(produtos); 
        
-        const primeirosProdutos = produtos.slice(2, 5);
+        const primeirosProdutos = produtos.slice(2, 6);
         renderProducts(primeirosProdutos);
     } catch (error) {
         console.error('Erro ao carregar produtos:', error);
@@ -70,6 +71,9 @@ function renderProducts(produtos) {
     container.innerHTML = ''; // Limpa o container antes de adicionar os produtos
 
     produtos.forEach(produto => {
+        if (produto.qtd_estoque === 0) {
+            return; 
+        }
         // Imagem padrão
         const imagem = productImages[produto.descricao] || "link_da_imagem_predefinida";
 

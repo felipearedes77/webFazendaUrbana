@@ -2,8 +2,8 @@
 
 // Mapeamento de produtos para imagens 
 const productImages = {
-    "Banana": "https://png.pngtree.com/png-clipart/20220716/ourmid/pngtree-banana-yellow-fruit-banana-skewers-png-image_5944324.png",
-    "Laranja": "https://cini.com.br/wp-content/uploads/2018/11/2-Laranja.png",
+    "Banana": "bananaa.png",
+    "Laranja": "laranjaa.png",
 };
 
 
@@ -13,7 +13,7 @@ let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 // Função para buscar produtos da API
 async function fetchProducts() {
     try {
-        const response = await fetch('http://192.168.1.111:1777/produtos');
+        const response = await fetch('http://localhost:1777/produtos');
         const produtos = await response.json();
         console.log(produtos);
        
@@ -73,6 +73,11 @@ function renderProducts(produtos) {
     container.innerHTML = ''; // Limpa o container antes de adicionar os produtos
 
     produtos.forEach(produto => {
+        
+        if (produto.qtd_estoque === 0) {
+            return; 
+        }
+        
         // Imagem padrão
         const imagem = productImages[produto.descricao] || "link_da_imagem_predefinida";
 

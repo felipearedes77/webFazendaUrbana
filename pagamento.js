@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(`Processando produto: ${produto.descricao}, ID: ${produto.id}, Quantidade no Carrinho: ${produto.quantidade}`);
             
             // Atualizar o estoque usando PATCH
-            return fetch(`http://192.168.1.111:1777/produtos/${produto.id}`)
+            return fetch(`http://localhost:1777/produtos/${produto.id}`)
                 .then(response => {
                     if (!response.ok) {
                         console.error(`Erro ao buscar estoque do produto ${produto.descricao}: ${response.statusText}`);
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log(`Estoque atualizado para ${produto.descricao} será: ${novoEstoque}`);
 
                     // Atualizar o estoque
-                    return fetch(`http://192.168.1.111:1777/produtos/${produto.id}`, {
+                    return fetch(`http://localhost:1777/produtos/${produto.id}`, {
                         method: "PATCH",
                         headers: {
                             "Content-Type": "application/json"

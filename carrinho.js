@@ -1,9 +1,10 @@
 const productImages = {
-    "Banana": "https://png.pngtree.com/png-clipart/20220716/ourmid/pngtree-banana-yellow-fruit-banana-skewers-png-image_5944324.png",
-    "Laranja": "https://cini.com.br/wp-content/uploads/2018/11/2-Laranja.png",
-    "Alface": "https://png.pngtree.com/png-vector/20240715/ourmid/pngtree-curly-lettuce-png-image_13039528.png",
-    "Batata": "https://static.vecteezy.com/system/resources/thumbnails/042/538/683/small/raw-potatoes-isolated-free-png.png",
-    "cenoura": "https://nicolaumax.com.br/wp-content/uploads/2024/06/cenoura.png"
+    "Banana": "bananaa.png",
+    "Laranja": "laranjaa.png",
+    "Alface": "alface.png",
+    "Batata": "bhbatata.png",
+    "Cenoura": "cenoura-alanna.png",
+    "Rucula":"rucula.png"
 };
 
 // Array para armazenar os produtos do carrinho

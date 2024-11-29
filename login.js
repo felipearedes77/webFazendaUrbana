@@ -31,51 +31,56 @@ btnCadastrar.addEventListener("click", () => {
 // Parte do Cadastro
 const formCadastrarElement = document.getElementById("formCadastrar");
 
+// Parte do Cadastro
 formCadastrarElement.addEventListener("submit", (e) => {
   e.preventDefault(); // Evita que o formulário seja enviado
 
   const novoEmail = document.getElementById("novo-email").value.trim();
+  const novoEndereco = document.getElementById("endereco").value.trim();
   const novaSenha = document.getElementById("nova-senha").value.trim();
   const confirmaSenha = document.getElementById("confirmar-senha").value.trim();
 
   // Validação do Email
   if (!novoEmail.includes("@")) {
-    MensagemCadastro.style.display = "block";
-    MensagemCadastro.textContent = "Por favor, insira um e-mail válido.";
-    MensagemCadastro.style.color = "red";
-    return;
+      MensagemCadastro.style.display = "block";
+      MensagemCadastro.textContent = "Por favor, insira um e-mail válido.";
+      MensagemCadastro.style.color = "red";
+      return;
   }
 
   // Validação das Senhas
   if (novaSenha !== confirmaSenha) {
-    MensagemCadastro.style.display = "block";
-    MensagemCadastro.textContent = "As senhas não coincidem.";
-    MensagemCadastro.style.color = "red";
-    return;
+      MensagemCadastro.style.display = "block";
+      MensagemCadastro.textContent = "As senhas não coincidem.";
+      MensagemCadastro.style.color = "red";
+      return;
   }
 
   // Verificação se o Email já está cadastrado
   const usuarioExistente = usuariosCadastrados.find(
-    (user) => user.email === novoEmail
+      (user) => user.email === novoEmail
   );
   if (usuarioExistente) {
-    MensagemCadastro.style.display = "block";
-    MensagemCadastro.textContent = "Email já cadastrado.";
-    MensagemCadastro.style.color = "red";
-    return;
+      MensagemCadastro.style.display = "block";
+      MensagemCadastro.textContent = "Email já cadastrado.";
+      MensagemCadastro.style.color = "red";
+      return;
   }
 
-  // Se tudo estiver certo, adiciona o Usuário
-  usuariosCadastrados.push({ email: novoEmail, senha: novaSenha });
+  // Se tudo estiver certo, adiciona o Usuário com endereço
+  usuariosCadastrados.push({ email: novoEmail, endereco: novoEndereco, senha: novaSenha });
   MensagemCadastro.style.display = "block";
   MensagemCadastro.textContent = "Cadastro realizado com sucesso.";
   MensagemCadastro.style.color = "blue";
 
   // Limpa os Campos
   document.getElementById("novo-email").value = "";
+  document.getElementById("endereco").value = "";
   document.getElementById("nova-senha").value = "";
   document.getElementById("confirmar-senha").value = "";
 });
+
+
 
 // Parte do Login
 const formEntrarElement = document.getElementById("formEntrar");
@@ -111,8 +116,13 @@ formEntrarElement.addEventListener("submit", (e) => {
     return;
   }
 
-  // Se tudo estiver certo
+  // Se tudo estiver certo, redireciona para a página de produtos
   MensagemEntrar.style.display = "block";
   MensagemEntrar.textContent = "Login bem-sucedido.";
   MensagemEntrar.style.color = "blue";
+
+  // Redirecionamento para teladeprodutos.html
+  setTimeout(() => {
+    window.location.href = "teladeprodutos.html";
+  }, 1000); // Espera 1 segundo antes de redirecionar
 });
